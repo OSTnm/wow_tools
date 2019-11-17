@@ -18,7 +18,8 @@ BATTLE_WIN_NAME = "暴雪战网"
 def login(entry):
     pyautogui.moveTo(entry[0], entry[1], 0.5)
     pyautogui.click(interval=0.5)
-    time.sleep(2)
+    # temp cursor location
+    pyautogui.moveTo(100, 100, 0.5)
 
 def prompt_login(wow):
     img, entry = wow_img.grab_entry(wow.hwnd)
@@ -58,6 +59,7 @@ def idling():
         if wow_gui.RUNNING:
             for wow in wow_wins:
                 do_idling(wow)
+                time.sleep(2)
         time.sleep(5)
 
 if __name__ == "__main__":

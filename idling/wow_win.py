@@ -37,12 +37,12 @@ class WowWin(object):
         if win32gui.GetForegroundWindow() == hwnd:
             return
         win32gui.ShowWindow(hwnd, win32con.SW_MINIMIZE)
-        time.sleep(0.5)
+        time.sleep(1)
         # win32gui.ShowWindow(hwnd, win32con.SW_NORMAL)
         win32gui.ShowWindow(hwnd, win32con.SW_MAXIMIZE)
         win32gui.BringWindowToTop(hwnd)
         win32gui.SetForegroundWindow(hwnd)
-        time.sleep(0.5)
+        time.sleep(1)
         return
 
     def __set_minimize(self, hwnd):
