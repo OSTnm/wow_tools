@@ -18,6 +18,7 @@ BATTLE_WIN_NAME = "暴雪战网"
 def login(entry):
     pyautogui.moveTo(entry[0], entry[1], 0.5)
     pyautogui.click(interval=0.5)
+    time.sleep(2)
 
 def prompt_login(wow):
     img, entry = wow_img.grab_entry(wow.hwnd)

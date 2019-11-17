@@ -14,7 +14,7 @@ IMG_QUEUE_NAME    = IMG_PREFIX + 'queue.jpeg'
 IMG_OFFLINE_NAME  = IMG_PREFIX + 'offline.jpeg'
 IMG_OFFLINE2_NAME = IMG_PREFIX + 'offline2.jpeg'
 
-IMG_SELECTION_ENTRY    = [0.450, 0.900, 0.100, 0.030]
+IMG_SELECTION_ENTRY    = [0.465, 0.900, 0.070, 0.030]
 IMG_SELECTION_QUEUE    = [0.470, 0.541, 0.060, 0.020]
 IMG_SELECTION_OFFLINE  = [0.405, 0.460, 0.192, 0.080]
 IMG_SELECTION_OFFLINE2 = [0.480, 0.490, 0.050, 0.062]
@@ -25,7 +25,7 @@ IMG_OFFLINE = Image.open(IMG_OFFLINE_NAME, "r")
 IMG_OFFLINE2 = Image.open(IMG_OFFLINE2_NAME, "r")
 
 IMG_CUT_OFF = 5
-IMG_DIFF_HIST = 0.85
+IMG_DIFF_HIST = 0.80
 
 def img_histogram_get(img):
     H = cv2.calcHist([img], [1], None, [256], [0, 256])
@@ -40,8 +40,9 @@ def img_get_diff_hist(img1, img2):
     # plt.plot(H2,label="img2")
     # plt.legend()
     # plt.show()
-    # print(cv2.compareHist(H1, H2, 0))
-    return cv2.compareHist(H1, H2, 0)
+    rc = cv2.compareHist(H1, H2, 0)
+    print(rc)
+    return rc
 
 def img_get_diff(img1, img2):
     x, y = img2.size

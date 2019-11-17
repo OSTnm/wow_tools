@@ -8,9 +8,9 @@
 
 Idling keeps game character online and login automatically when being offline.
 
-| Platform                       | World of Warcraft Versoin | Game Instance | Geometry | Test Result |
-| ------------------------------ | ------------------------- | ------------- | ---------| ----------- |
-| Win10 | Vanilla, Chinese | 1 | 1920X1080 | ✔ |
+| Platform                       | World of Warcraft Versoin | Factions | Game Instances | Geometry  | Test Result |
+| ------------------------------ | ------------------------- | ---------| -------------- | --------- | ----------- |
+| Win10                          | Vanilla, Chinese          | Alliance |              1 | 1920X1080 | ✔ |
 
 ### Usage
 
@@ -18,6 +18,7 @@ Idling keeps game character online and login automatically when being offline.
 - type 'home' to activate/pause it
 <img src="idling/wow_idling_running.png" width = 20% height = 20% />
 <img src="idling/wow_idling_on_pause.png" width = 20% height = 20% />
+
 - quit
 <img src="idling/wow_idling_quit.png" width = 20% height = 20% />
 
