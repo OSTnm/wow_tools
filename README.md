@@ -44,6 +44,8 @@ Idling keeps game character online and login automatically when being offline.
 - pillow
 - pynput
 - tendo
+- pyinstaller
+- scikit-image
 
 ### Limitation
 
@@ -55,3 +57,4 @@ Only track existing wow instances for better performace.
 **Wow Tools** is released under the terms of Apache License, Version 2.0. Please refer to the LICENSE file.
 
 - - -
+

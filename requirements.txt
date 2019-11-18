@@ -8,3 +8,4 @@ pillow
 pynput
 tendo
 pyinstaller
+scikit-image

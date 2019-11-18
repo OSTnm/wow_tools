@@ -5,7 +5,7 @@ import numpy as np
 # import matplotlib.pyplot as plt
 from PIL import ImageGrab
 from PIL import Image
-# from skimage.measure import compare_ssim
+from skimage.measure import compare_ssim
 import win32gui
 
 IMG_PREFIX        = 'classic/'
@@ -44,23 +44,22 @@ def img_get_diff_hist(img1, img2):
     print(rc)
     return rc
 
-def img_get_diff(img1, img2):
-    x, y = img2.size
+def img_get_diff_ssim(img1, img2):
+    img1 = cv2.cvtColor(img1, cv2.COLOR_RGB2GRAY)
+    img2 = cv2.cvtColor(img2, cv2.COLOR_RGB2GRAY)
 
-    # img1 = np.array(img1.resize((x, y)))
-    # img2 = np.array(img2.resize((x, y)))
+    Image.fromarray(img1).show()
+    Image.fromarray(img2).show()
+    return compare_ssim(img1, img2, full=True)[0]
+
+def img_get_diff(img1, img2):
+    img1 = img1.resize((img2.size[0], img2.size[1]), Image.ANTIALIAS)
 
     img1 = np.array(img1)
     img2 = np.array(img2)
 
-    try:
-        img1 = np.resize(img1, (img2.shape[0], img2.shape[1], img2.shape[2]))
-    except Exception as e:
-        print("numpy resize failed, skip it")
-        return 0
-
-    return img_get_diff_hist(img1, img2)
-    # return compare_ssim(img1, img2, multichannel=True)
+    # return img_get_diff_hist(img1, img2)
+    return img_get_diff_ssim(img1, img2)
 
 def grab(hwnd, selection, show, save, name):
     [w_tl_x, w_tl_y, w_br_x, w_br_y] = win32gui.GetWindowRect(hwnd)
