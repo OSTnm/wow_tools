@@ -1,7 +1,7 @@
 # Wow Tools ![wow_tools.python](wow_tools.png)
 > **Wow Tools** is a series of tools for world of warcraft, free and simple for me.
 
-[![Build Status]][travis-url]
+[![Build Status](https://travis-ci.com/OSTnm/wow_tools.svg?branch=master)](https://travis-ci.com/OSTnm/wow_tools)
 
 - [Idling](#Idling)
 
@@ -55,5 +55,3 @@ Only track existing wow instances for better performace.
 **Wow Tools** is released under the terms of Apache License, Version 2.0. Please refer to the LICENSE file.
 
 - - -
-
-[travis-url]: https://travis-ci.com/OSTnm/wow_tools.svg?branch=master
