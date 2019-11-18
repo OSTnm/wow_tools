@@ -1,6 +1,7 @@
 # Wow Tools ![wow_tools.python](wow_tools.png)
-
 > **Wow Tools** is a series of tools for world of warcraft, free and simple for me.
+
+[![Build Status][travis-image]][travis-url]
 
 - [Idling](#Idling)
 
