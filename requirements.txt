@@ -1,0 +1,10 @@
+pyautogui
+opencv-python
+psutil
+pywin32
+plyer
+infi.systray
+pillow
+pynput
+tendo
+pyinstaller

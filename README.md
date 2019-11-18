@@ -22,6 +22,9 @@ Idling keeps game character online and login automatically when being offline.
 - quit
 <img src="idling/wow_idling_quit.png" width = 20% height = 20% />
 
+### Exe
+
+**./install.sh**, note that it is based on bash, [git-bash](https://gitforwindows.org/) is recommended.
 
 ### How
 
@@ -36,7 +39,7 @@ Idling keeps game character online and login automatically when being offline.
 - psutil
 - pywin32
 - plyer
-- infi
+- infi.systray
 - pillow
 - pynput
 - tendo
