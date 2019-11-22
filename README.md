@@ -12,6 +12,7 @@ Idling keeps game character online and login automatically when being offline.
 | Platform                       | World of Warcraft Versoin | Factions | Game Instances | Geometry  | Test Result |
 | ------------------------------ | ------------------------- | ---------| -------------- | --------- | ----------- |
 | Win10                          | Vanilla, Chinese          | Alliance |              1 | 1920X1080 | ✔ |
+| Win10                          | Vanilla, Chinese          | Alliance |              3 | 1920X1080 | ✔ |
 
 ### Usage
 
