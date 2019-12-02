@@ -2,6 +2,8 @@
  #!/bin/env python
 import sys
 import os
+#export pbr version for pyinstaller tendo
+os.environ["PBR_VERSION"] = '5.4.3'
 import time
 import pyautogui
 import cv2

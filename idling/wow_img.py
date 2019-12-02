@@ -5,7 +5,7 @@ import numpy as np
 # import matplotlib.pyplot as plt
 from PIL import ImageGrab
 from PIL import Image
-from skimage.measure import compare_ssim
+from skimage.metrics import structural_similarity
 import win32gui
 
 IMG_PREFIX        = 'classic/'
@@ -48,9 +48,9 @@ def img_get_diff_ssim(img1, img2):
     img1 = cv2.cvtColor(img1, cv2.COLOR_RGB2GRAY)
     img2 = cv2.cvtColor(img2, cv2.COLOR_RGB2GRAY)
 
-    Image.fromarray(img1).show()
-    Image.fromarray(img2).show()
-    return compare_ssim(img1, img2, full=True)[0]
+    # Image.fromarray(img1).show()
+    # Image.fromarray(img2).show()
+    return structural_similarity(img1, img2, full=True)[0]
 
 def img_get_diff(img1, img2):
     img1 = img1.resize((img2.size[0], img2.size[1]), Image.ANTIALIAS)
